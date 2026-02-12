@@ -95,21 +95,20 @@
 		
 	</dependencies>
 	
-	<distributionManagement>
+<distributionManagement>
+
+    <repository>
+        <id>nexus-release</id>
+        <url>http://3.95.235.204:8081/repository/samuyelu-release/</url>
+    </repository>
+
     <snapshotRepository>
         <id>nexus-snapshot</id>
         <url>http://3.95.235.204:8081/repository/samuyelu-snapshot/</url>
     </snapshotRepository>
+
 </distributionManagement>
 
-	    
-	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://3.95.235.204:8081/repository/samuyelu-release/</url>
-	    </snapshotRepository>
-	    
-	</distributionManagement>
 	
 	<build>
 		<finalName>maven-web-application</finalName>
