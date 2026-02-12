@@ -1,15 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mt</groupId>
     <artifactId>maven-web-application</artifactId>
-   <version>0.0.1</version>
-
-
+    <version>0.0.1</version>
     <packaging>war</packaging>
 
     <name>maven-web-application</name>
@@ -25,8 +23,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!-- Sonar -->
         <sonar.host.url>http://54.221.112.101:9000</sonar.host.url>
     </properties>
 
@@ -39,6 +35,7 @@
             <version>20160212</version>
         </dependency>
 
+        <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -88,44 +85,5 @@
 
     </dependencies>
 
-    <!-- ================= NEXUS DEPLOYMENT ================= -->
-  <distributionManagement>
-    <snapshotRepository>
-        <id>nexus</id>
-        <url>http://34.226.211.248:8081/repository/mahe-snapshot/</url>
-    </snapshotRepository>
-
- <distributionManagement>
-    <repository>
-        <id>nexus</id>
-        <url>http://34.226.211.248:8081/repository/mahe-release/</url>
-    </repository>
-</distributionManagement>
-
- 
-
-         
-
-
-    <!-- ================= BUILD ================= -->
-    <build>
-        <finalName>maven-web-application</finalName>
-
-        <plugins>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.2</version>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-            </plugin>
-
-        </plugins>
-    </build>
-
-</project>
+    <!-- ================= NEXUS RELEASE DEPLOYMENT ================= -->
+    <distributionManagement>
