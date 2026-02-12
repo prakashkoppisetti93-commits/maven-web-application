@@ -6,6 +6,7 @@
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
+
 	
 	<name>maven-web-application</name>
 
@@ -95,12 +96,12 @@
 	</dependencies>
 	
 	<distributionManagement>
-	
-	    <repository>
-	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://3.95.235.204:8081/repository/samuyelu-snapshot/</url>
-	    </repository>
+    <snapshotRepository>
+        <id>nexus-snapshot</id>
+        <url>http://3.95.235.204:8081/repository/samuyelu-snapshot/</url>
+    </snapshotRepository>
+</distributionManagement>
+
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
