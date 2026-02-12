@@ -93,7 +93,17 @@
         <id>nexus</id>
         <url>http://34.226.211.248:8081/repository/mahe-snapshot/</url>
     </snapshotRepository>
+
+ <distributionManagement>
+    <repository>
+        <id>nexus</id>
+        <url>http://34.226.211.248:8081/repository/mahe-release/</url>
+    </repository>
 </distributionManagement>
+
+ 
+
+         
 
 
     <!-- ================= BUILD ================= -->
