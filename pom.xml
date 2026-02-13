@@ -23,7 +23,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://18.234.195.27:9000/</sonar.host.url>
+		<sonar.host.url>http://http://54.226.110.50/:9000/</sonar.host.url>
 		<sonar.login>squ_0f4008483275d1556222cf8fa1bae167adce8f8c</sonar.login>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin123</sonar.password> 
@@ -100,12 +100,12 @@
 
     <repository>
         <id>nexus</id>
-        <url>http://3.95.235.204:8081/repository/samuyelu-release/</url>
+        <url>http://52.90.21.14/:8081/repository/samuyelu-release/</url>
     </repository>
 
     <snapshotRepository>
         <id>nexus</id>
-        <url>http://3.95.235.204:8081/repository/samuyelu-snapshot/</url>
+        <url>http://52.90.21.14/:8081/repository/samuyelu-snapshot/</url>
     </snapshotRepository>
 
 </distributionManagement>
