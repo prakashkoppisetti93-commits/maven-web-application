@@ -13,6 +13,7 @@
     <name>maven-web-application</name>
     <description>Maven Web Project for Java Project</description>
 
+    <!-- ================= PROPERTIES ================= -->
     <properties>
         <jdk.version>1.8</jdk.version>
         <spring.version>5.1.2.RELEASE</spring.version>
@@ -22,6 +23,7 @@
         <sonar.host.url>http://34.204.43.90:9000</sonar.host.url>
     </properties>
 
+    <!-- ================= DEPENDENCIES ================= -->
     <dependencies>
 
         <!-- JSON -->
@@ -82,9 +84,25 @@
 
     </dependencies>
 
-    <build>
-        <finalName>maven-web-application</finalName>
+    <!-- ================= NEXUS DEPLOYMENT ================= -->
+    <distributionManagement>
 
+        <repository>
+            <id>nexus</id>
+            <name>Dady Release Repository</name>
+            <url>http://98.81.128.125:8081/repository/dady-release/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Dady Snapshot Repository</name>
+            <url>http://98.81.128.125:8081/repository/dady-snapshot/</url>
+        </snapshotRepository>
+
+    </distributionManagement>
+
+    <!-- ================= BUILD PLUGINS ================= -->
+    <build>
         <plugins>
 
             <!-- Compiler Plugin -->
