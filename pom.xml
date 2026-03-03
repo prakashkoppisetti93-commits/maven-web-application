@@ -20,7 +20,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- SonarQube Server -->
-        <sonar.host.url>http://34.204.43.90:9000</sonar.host.url>
+        <sonar.host.url>http://3.236.37.196:9000</sonar.host.url>
     </properties>
 
     <!-- ================= DEPENDENCIES ================= -->
