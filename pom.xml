@@ -90,13 +90,13 @@
         <repository>
             <id>nexus</id>
             <name>Dady Release Repository</name>
-            <url>http://98.81.128.125:8081/repository/dady-release/</url>
+            <url>http://54.175.150.153:8081/repository/dady-release/</url>
         </repository>
 
         <snapshotRepository>
             <id>nexus</id>
             <name>Dady Snapshot Repository</name>
-            <url>http://98.81.128.125:8081/repository/dady-snapshot/</url>
+            <url>http://54.175.150.153:8081/repository/dady-snapshot/</url>
         </snapshotRepository>
 
     </distributionManagement>
