@@ -11,16 +11,14 @@
     <packaging>war</packaging>
 
     <name>maven-web-application</name>
-    <description>Maven Web Project for Java Project</description>
+    <description>Maven Web Project for Java</description>
 
     <!-- ================= PROPERTIES ================= -->
     <properties>
-        <jdk.version>1.8</jdk.version>
-        <spring.version>5.1.2.RELEASE</spring.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!-- SonarQube Server -->
-        <sonar.host.url>http://3.236.37.196:9000</sonar.host.url>
+        <spring.version>5.1.2.RELEASE</spring.version>
     </properties>
 
     <!-- ================= DEPENDENCIES ================= -->
@@ -87,20 +85,23 @@
     <!-- ================= NEXUS DEPLOYMENT ================= -->
     <distributionManagement>
 
+        <!-- Release Repository -->
         <repository>
             <id>nexus</id>
             <name>Dady Release Repository</name>
             <url>http://54.175.150.153:8081/repository/dady-release/</url>
         </repository>
 
-<distributionManagement>
-    <snapshotRepository>
-        <id>dady-snapshot</id>
-        <url>http://54.175.150.153:8081/repository/dady-snapshot/</url>
-    </snapshotRepository>
-</distributionManagement>
+        <!-- Snapshot Repository -->
+        <snapshotRepository>
+            <id>dady-snapshot</id>
+            <name>Dady Snapshot Repository</name>
+            <url>http://54.175.150.153:8081/repository/dady-snapshot/</url>
+        </snapshotRepository>
 
-    <!-- ================= BUILD PLUGINS ================= -->
+    </distributionManagement>
+
+    <!-- ================= BUILD ================= -->
     <build>
         <plugins>
 
@@ -109,10 +110,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
-                <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
-                </configuration>
             </plugin>
 
             <!-- WAR Plugin -->
