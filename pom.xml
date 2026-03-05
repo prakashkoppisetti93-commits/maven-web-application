@@ -89,7 +89,7 @@
         <repository>
             <id>nexus</id>
             <name>Dady Release Repository</name>
-            <url>http://54.175.150.153:8081/repository/dady-release/</url>
+            <url>http://98.93.222.117:8081/repository/siri-release/</url>
         </repository>
 
         <!-- Snapshot Repository -->
