@@ -3,130 +3,156 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
+<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.devops</groupId>
-    <artifactId>maven-web-application</artifactId>
-    <version>1.2.0</version>
-    <packaging>war</packaging>
+<!-- ================= PROJECT INFO ================= -->
 
-    <name>maven-web-application</name>
-    <description>Maven Web Project for Java</description>
+<groupId>com.devops</groupId>
+<artifactId>maven-web-application</artifactId>
+<version>1.2.0</version>
+<packaging>war</packaging>
 
-    <!-- ================= PROPERTIES ================= -->
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.version>5.1.2.RELEASE</spring.version>
-    </properties>
+<name>maven-web-application</name>
+<description>DevOps Maven Web Application</description>
 
-    <!-- ================= DEPENDENCIES ================= -->
-    <dependencies>
+<!-- ================= PROPERTIES ================= -->
 
-        <!-- JSON -->
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20160212</version>
-        </dependency>
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <spring.version>5.1.2.RELEASE</spring.version>
+</properties>
 
-        <!-- JUnit -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
+<!-- ================= DEPENDENCIES ================= -->
 
-        <!-- Mockito -->
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>1.9.5</version>
-            <scope>test</scope>
-        </dependency>
+<dependencies>
 
-        <!-- Servlet API -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
-            <scope>provided</scope>
-        </dependency>
+    <!-- JSON -->
+    <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20160212</version>
+    </dependency>
 
-        <!-- Spring Framework -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+    <!-- Servlet -->
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.1.0</version>
+        <scope>provided</scope>
+    </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+    <!-- Spring Core -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+    <!-- Spring Context -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+    <!-- Spring Web -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
 
-    </dependencies>
+    <!-- Spring MVC -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
 
-    <!-- ================= NEXUS DEPLOYMENT ================= -->
-    <distributionManagement>
+    <!-- Junit -->
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+    </dependency>
 
-        <!-- Release Repository -->
-        <repository>
-            <id>nexus</id>
-            <name>nexus-releases</name>
-            <url>http://98.93.222.117:8081/repository/maven-releases01/</url>
-        </repository>
+    <!-- Mockito -->
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>1.9.5</version>
+        <scope>test</scope>
+    </dependency>
 
-        <!-- Snapshot Repository -->
-        <snapshotRepository>
-            <id>nexus</id>
-            <name>nexus-snapshots</name>
-            <url>http://98.93.222.117:8081/repository/maven-snapshot02/</url>
-        </snapshotRepository>
+</dependencies>
 
-    </distributionManagement>
+<!-- ================= NEXUS DEPLOYMENT ================= -->
 
-    <!-- ================= BUILD ================= -->
-    <build>
-        <plugins>
+<distributionManagement>
 
-            <!-- Compiler Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-            </plugin>
+    <!-- RELEASE REPOSITORY -->
 
-            <!-- WAR Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.2</version>
-            </plugin>
+    <repository>
+        <id>nexus</id>
+        <name>nexus-releases</name>
+        <url>http://98.93.222.117:8081/repository/maven-releases01/</url>
+    </repository>
 
-            <!-- SonarQube Plugin -->
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>4.0.0.4121</version>
-            </plugin>
+    <!-- SNAPSHOT REPOSITORY -->
 
-        </plugins>
-    </build>
+    <snapshotRepository>
+        <id>nexus</id>
+        <name>nexus-snapshots</name>
+        <url>http://98.93.222.117:8081/repository/maven-snapshot02/</url>
+    </snapshotRepository>
+
+</distributionManagement>
+
+<!-- ================= BUILD ================= -->
+
+<build>
+
+    <finalName>maven-web-application</finalName>
+
+    <plugins>
+
+        <!-- MAVEN COMPILER -->
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version>
+        </plugin>
+
+        <!-- WAR PLUGIN -->
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.0</version>
+        </plugin>
+
+        <!-- DEPLOY PLUGIN -->
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>3.1.1</version>
+        </plugin>
+
+        <!-- SONARQUBE -->
+
+        <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>4.0.0.4121</version>
+        </plugin>
+
+    </plugins>
+
+</build>
 
 </project>
