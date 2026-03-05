@@ -89,7 +89,7 @@
         <repository>
             <id>com.devops</id>
             <name>Dady Release Repository</name>
-            <url>http://98.93.222.117:8081/repository/siri-release/</url>
+            <url>http://98.93.222.117:8081/repository/maven-releases01/</url>
         </repository>
 
         <!-- Snapshot Repository -->
