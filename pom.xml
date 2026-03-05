@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mt</groupId>
+    <groupId>com.devops</groupId>
     <artifactId>maven-web-application</artifactId>
     <version>1.2.0-SNAPSHOT</version>
     <packaging>war</packaging>
@@ -87,15 +87,15 @@
 
         <!-- Release Repository -->
         <repository>
-            <id>com.devops</id>
-            <name>Dady Release Repository</name>
+            <id>nexus</id>
+            <name>nexus-releases</name>
             <url>http://98.93.222.117:8081/repository/maven-releases01/</url>
         </repository>
 
         <!-- Snapshot Repository -->
         <snapshotRepository>
-            <id>dady-snapshot</id>
-            <name>Dady Snapshot Repository</name>
+            <id>nexus</id>
+            <name>nexus-snapshots</name>
             <url>http://54.175.150.153:8081/repository/dady-snapshot/</url>
         </snapshotRepository>
 
