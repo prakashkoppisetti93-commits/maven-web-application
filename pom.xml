@@ -107,7 +107,7 @@
 	      <id>nexus</id>
 	      <name>nexus release</name>
 	      <url>http://18.212.141.229:8081/repository/maven1-releases/</url>
-	  </repository>
+	   </repository>
    </distributionManagement>
 	
 	<build>
